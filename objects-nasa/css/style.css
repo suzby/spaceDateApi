@@ -1,0 +1,57 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  background-color: rgba(3, 26, 64, 1);
+  color: rgb(117, 95, 68);
+  font-family: 'Space Mono', monospace;
+}
+h1 {
+  font-size: 2rem;
+}
+input,
+button {
+  background-color: blueviolet;
+}
+h2 {
+  text-align: center;
+  font-size: 4em;
+
+}
+h3 {
+  padding: 0 4em 0 2em; 
+  color: rgb(238, 191, 133);
+  font-weight: 100;
+  font-size: 1.5em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+  height: 600px;
+  border: 3em solid black;
+
+}
+header {
+  display: flex;
+}
+image, h3 {
+  width: 50%;
+  flex-direction: row;
+}
+.blocks {
+  display: flex;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+::hover {
+  background-color: black;
+}
