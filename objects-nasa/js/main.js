@@ -2,7 +2,11 @@
 
 //TO DO
     //check local storage
-    //display hide img / iframe
+
+
+/**************************************************************/
+//check local storage
+
 
 
 // load todays date on load
@@ -11,23 +15,19 @@ window.onload = function() {
     const apiKeyOL = 'api_key=3IsLvqaKq5kg9nWmrdwLR2gISZ9x7Jczc46mCv5T'
     const urlOL = `https://api.nasa.gov/planetary/apod?`
 
-    let fullToday = new Date()
-    let dd = String(today.getDate()).padStart(2,'0')
-    let mm = String(today.getMonth() + 1).padStart(2,'0')
-    let yyyy = fullToday.getFullYear()
-    let today = `&date=${yyyy}-${mm}-${dd}`
-
-    fetch(urlOL+apiKeyOL+today)
+    fetch(urlOL+apiKeyOL)
         .then(res=> res.json())
         .then(data=> {
             console.log(data)
             if(data.media_type === 'image') {
-                document.querySelector('img').src = data.url            
+                document.querySelector('img').src = data.url  
+                iframe.style.display = "none"          
             } else if (data.media_type === 'video') {
                 document.querySelector('iframe').src = data.url
+                iframe.style.display = "block"
             }
             document.querySelector('h2').innerText = data.title
-            document.querySelector('h3').innerText = data.explanation
+            document.querySelector('p').innerText = data.explanation
         })
         .catch(err=> {
             console.log(`today error ${err}`)
@@ -51,13 +51,14 @@ function getPhoto(){
             console.log(data)
             if( data.media_type === 'image' ){
                 document.querySelector('img').src = data.url
+                iframe.style.display = "none"
                 
             } else if (data.media_type === 'video'){
                 document.querySelector('iframe').src = data.url
-                
+                iframe.style.display = "block"
             }
             document.querySelector('h2').innerText = data.title
-            document.querySelector('h3').innerText = data.explanation
+            document.querySelector('p').innerText = data.explanation
 
         })
         .catch(err=> {
