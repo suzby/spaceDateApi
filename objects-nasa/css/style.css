@@ -18,45 +18,47 @@ button {
   border: none;
   margin: .3em;
 }
+.blocks {
+  width: 95%;
+  margin: auto;
+}
 h2 {
   text-align: center;
   font-size: 4em;
 
 }
-h3 {
-  padding: 0 4em 0 2em; 
+p {
+ 
   color: rgb(238, 191, 133);
   font-weight: 100;
   font-size: 1.5em;
   text-align: justify;
   text-justify: inter-word;
-}
-p {
-  float: left;
+  display: inline;
+  line-height: 1.5;
 }
 /******************************************
 /* LAYOUT
 /*******************************************/
-img{
-  display: block;
+img, iframe{
+  float: left;
   margin: 0 auto;
-  height: 600px;
+  max-height: 800px;
   border: 3em solid black;
-
+  margin: 0 3% 0 0;
 }
 header {
   display: flex;
 }
-image, h3 {
+image, p {
   width: 50%;
-  flex-direction: row;
+ 
 }
-.blocks {
-  display: flex;
-}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 ::selection {
   color: black;
+  background:rgb(238, 191, 133);
 }
