@@ -74,7 +74,7 @@ function getPhoto(){
             document.getElementById('img').style.display = 'none'
             document.getElementById('ifram').style.display = 'none'
         }
-    localStorage.setItem("date:," date);
+    localStorage.setItem("date:", date);
 }
 
 
