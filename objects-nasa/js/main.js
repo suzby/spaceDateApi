@@ -1,11 +1,12 @@
 //The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
 
 //TO DO
-    //check local storage
+    //maybe local storage
+    // zoom on hover over image
 
 
 /**************************************************************/
-//check local storage
+//
 
 
 
@@ -73,6 +74,7 @@ function getPhoto(){
             document.getElementById('img').style.display = 'none'
             document.getElementById('ifram').style.display = 'none'
         }
+    localStorage.setItem("date:," date);
 }
 
 

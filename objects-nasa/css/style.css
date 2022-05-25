@@ -21,10 +21,12 @@ button {
 .blocks {
   width: 95%;
   margin: auto;
+  padding-top: 3%;
 }
 h2 {
   text-align: center;
   font-size: 4em;
+  margin: 0;
 
 }
 p {
@@ -42,10 +44,12 @@ p {
 /*******************************************/
 img, iframe{
   float: left;
-  margin: 0 auto;
-  max-height: 800px;
+  max-height: 750px;
   border: 3em solid black;
   margin: 0 3% 0 0;
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: transform .2s;
 }
 header {
   display: flex;
@@ -61,4 +65,8 @@ image, p {
 ::selection {
   color: black;
   background:rgb(238, 191, 133);
+}
+
+img:hover, iframe:hover {
+  transform: scale(1);
 }
